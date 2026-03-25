@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  
+  <title>Vespera Statistical | İstatistiksel Analiz ve Akademik Araştırma Desteği</title>
   <meta name="description" content="Vespera Statistical; istatistiksel analiz, veri analizi, akademik araştırma desteği, tez analizi, makale veri analizi, SPSS, R, raporlama ve profesyonel istatistik danışmanlığı hizmetleri sunar." />
   <meta name="keywords" content="istatistiksel analiz, veri analizi, akademik araştırma desteği, tez analizi, makale analizi, SPSS analizi, R analizi, istatistik danışmanlığı, araştırma desteği, veri raporlama, ekonometrik modelleme" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -42,6 +42,7 @@
       --shadow: 0 24px 70px rgba(0,0,0,0.38);
       --radius: 24px;
       --max: 1220px;
+      --design-width: 1220;
     }
 
     * {
@@ -103,6 +104,19 @@
       color: #000;
       z-index: 9999;
       border-radius: 10px;
+    }
+
+    .site-scale {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .site-frame {
+      width: calc(var(--design-width) * 1px);
+      margin: 0 auto;
+      transform-origin: top center;
+      will-change: transform;
     }
 
     .nav {
@@ -492,127 +506,6 @@
       justify-content: space-between;
       gap: 14px;
     }
-
-    @media (max-width: 1080px) {
-      .services,
-      .work-grid,
-      .split,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .image-card {
-        min-height: 360px;
-      }
-    }
-
-    @media (max-width: 900px) {
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        width: 100%;
-        justify-content: flex-start;
-        gap: 14px;
-      }
-
-      .hero-card,
-      .hero-content {
-        min-height: 540px;
-      }
-
-      .hero-content {
-        padding: 30px;
-      }
-    }
-
-    @media (max-width: 760px) {
-      .container {
-        width: min(var(--max), calc(100% - 20px));
-      }
-
-      .section-head,
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .qr-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .qr-layout img {
-        width: 140px;
-      }
-
-      .hero-card,
-      .hero-content {
-        min-height: 480px;
-      }
-
-      .hero-content {
-        padding: 22px;
-        align-items: flex-end;
-      }
-
-      .hero-actions,
-      .contact-actions {
-        flex-direction: column;
-      }
-
-      .hero-actions .btn,
-      .contact-actions .btn {
-        width: 100%;
-      }
-
-      .contact-box,
-      .content-card,
-      .service-body,
-      .work-body {
-        padding: 22px;
-      }
-
-      h1 {
-        font-size: clamp(2rem, 9vw, 3.1rem);
-      }
-    }
-
-    @media (max-width: 520px) {
-      .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .hero-card,
-      .hero-content {
-        min-height: 430px;
-      }
-
-      .hero-bg {
-        background-image:
-          linear-gradient(180deg, rgba(4,16,31,0.82) 0%, rgba(4,16,31,0.48) 60%, rgba(4,16,31,0.24) 100%),
-          url('eb228cdea44db38977661427d3a1d419.png');
-      }
-
-      .hero-content {
-        padding: 18px;
-      }
-
-      .eyebrow {
-        font-size: 0.82rem;
-        padding: 7px 12px;
-      }
-
-      .contact-box {
-        padding: 18px;
-      }
-
-      .image-card {
-        min-height: 280px;
-      }
-    }
   </style>
 
   <script type="application/ld+json">
@@ -651,199 +544,214 @@
 <body>
   <a href="#icerik" class="skip-link">Ana içeriğe geç</a>
 
-  <header class="nav">
-    <div class="container nav-inner">
-      <a href="#top" class="brand" aria-label="Vespera Statistical ana sayfa">
-        <span class="brand-mark">
-          <img src="d04e8db5e775234ff43e11fa9a9dc881.png" alt="Vespera Statistical logosu">
-        </span>
-        <span>Vespera Statistical</span>
-      </a>
+  <div class="site-scale" id="siteScale">
+    <div class="site-frame" id="siteFrame">
+      <header class="nav">
+        <div class="container nav-inner">
+          <a href="#top" class="brand" aria-label="Vespera Statistical ana sayfa">
+            <span class="brand-mark">
+              <img src="d04e8db5e775234ff43e11fa9a9dc881.png" alt="Vespera Statistical logosu">
+            </span>
+            <span>Vespera Statistical</span>
+          </a>
 
-      <nav class="nav-links" aria-label="Ana menü">
-        <a href="#services">Hizmetler</a>
-        <a href="#showcase">Sunum</a>
-        <a href="#about-work">Ne Yapıyoruz?</a>
-        <a href="#contact">İletişim</a>
-      </nav>
-    </div>
-  </header>
+          <nav class="nav-links" aria-label="Ana menü">
+            <a href="#services">Hizmetler</a>
+            <a href="#showcase">Sunum</a>
+            <a href="#about-work">Ne Yapıyoruz?</a>
+            <a href="#contact">İletişim</a>
+          </nav>
+        </div>
+      </header>
 
-  <main id="top">
-    <section class="hero" id="icerik">
-      <div class="container">
-        <div class="hero-card reveal">
-          <div class="hero-bg" aria-hidden="true"></div>
-          <div class="hero-content">
-            <div class="hero-copy">
-              <div class="eyebrow">Statistical Analysis • Research Support • Reporting</div>
-              <h1>İstatistiksel Analiz ve Akademik Araştırma Desteği</h1>
+      <main id="top">
+        <section class="hero" id="icerik">
+          <div class="container">
+            <div class="hero-card reveal">
+              <div class="hero-bg" aria-hidden="true"></div>
+              <div class="hero-content">
+                <div class="hero-copy">
+                  <div class="eyebrow">Statistical Analysis • Research Support • Reporting</div>
+                  <h1>İstatistiksel Analiz ve Akademik Araştırma Desteği</h1>
+                  <p>
+                    Vespera Statistical; veri analizi, ekonometrik modelleme, akademik araştırma desteği,
+                    raporlama ve veri yorumlama süreçlerinde profesyonel çözümler sunar.
+                  </p>
+                  <div class="hero-actions">
+                    <a href="#services" class="btn btn-primary">Hizmetler</a>
+                    <a href="#contact" class="btn btn-secondary">İletişim</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="services">
+          <div class="container">
+            <div class="section-head reveal">
+              <div>
+                <h2>Hizmetler</h2>
+                <p>Tez, makale ve profesyonel projeler için veri odaklı analiz ve raporlama desteği.</p>
+              </div>
+            </div>
+
+            <div class="services">
+              <article class="card service reveal">
+                <img src="9020a5f12a637bc28ca8d3c8224e7530.png" alt="Tez ve araştırma desteği görseli">
+                <div class="service-body">
+                  <h3>Tez ve araştırma desteği</h3>
+                  <p>Araştırma planı, veri değerlendirmesi, bulgu yazımı ve sonuçların akademik çerçevede düzenlenmesine destek sunulur.</p>
+                </div>
+              </article>
+
+              <article class="card service reveal">
+                <img src="ae71a4d33a15ae54d7d08854d6a4266a.png" alt="İstatistiksel analiz ve raporlama görseli">
+                <div class="service-body">
+                  <h3>İstatistiksel analiz ve raporlama</h3>
+                  <p>Veri setlerinin analiz edilmesi, uygun yöntemlerin seçilmesi ve sonuçların grafiklerle profesyonel rapora dönüştürülmesi hedeflenir.</p>
+                </div>
+              </article>
+
+              <article class="card service reveal">
+                <img src="e0a7a6cc4b889aecbe68938dbbdcf8c3.png" alt="Veri inceleme ve yorumlama görseli">
+                <div class="service-body">
+                  <h3>Veri inceleme ve yorumlama</h3>
+                  <p>Tablo, çıktı ve istatistiksel bulgular sadeleştirilerek karar alma veya akademik kullanım için daha anlaşılır hale getirilir.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="about-work">
+          <div class="container">
+            <div class="section-head reveal">
+              <div>
+                <h2>Ne yapıyoruz?</h2>
+                <p>Akademik ve profesyonel veri süreçlerini teknik doğrulukla yapılandırıyoruz.</p>
+              </div>
+            </div>
+
+            <div class="work-grid">
+              <article class="work-item reveal">
+                <div class="work-body">
+                  <h3>İstatistiksel analiz</h3>
+                  <p>Veri setlerinin düzenlenmesi, uygun yöntem seçimi, modelleme ve sonuçların teknik doğrulukla değerlendirilmesi.</p>
+                </div>
+              </article>
+
+              <article class="work-item reveal">
+                <div class="work-body">
+                  <h3>Akademik araştırma desteği</h3>
+                  <p>Tez, makale ve araştırma projelerinde veri analizi, yöntemsel yapı ve bulguların sunuma hazırlanması.</p>
+                </div>
+              </article>
+
+              <article class="work-item reveal">
+                <div class="work-body">
+                  <h3>Raporlama ve görselleştirme</h3>
+                  <p>Tablo, grafik ve çıktıları sade, anlaşılır ve profesyonel bir sunum yapısına dönüştürme.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="showcase">
+          <div class="container split">
+            <div class="card image-card reveal">
+              <img src="eb228cdea44db38977661427d3a1d419.png" alt="Vespera Statistical tanıtım görseli">
+            </div>
+
+            <div class="card content-card reveal">
+              <h2>Bilimsel titizlik, profesyonel sunum</h2>
               <p>
-                Vespera Statistical; veri analizi, ekonometrik modelleme, akademik araştırma desteği,
-                raporlama ve veri yorumlama süreçlerinde profesyonel çözümler sunar.
+                Vespera Statistical; veri analizi, akademik çalışma desteği ve istatistiksel raporlama süreçlerini daha düzenli,
+                daha anlaşılır ve daha güçlü hale getirmeyi amaçlayan bir hizmet yapısı sunar.
               </p>
-              <div class="hero-actions">
-                <a href="#services" class="btn btn-primary">Hizmetler</a>
-                <a href="#contact" class="btn btn-secondary">İletişim</a>
+              <ul class="list">
+                <li>Akademik ve profesyonel projelerde sistematik analiz desteği sunulur.</li>
+                <li>İstatistiksel çıktılar sade, güven veren ve sunulabilir bir yapıya dönüştürülür.</li>
+                <li>Veri odaklı çalışmalar, yalnızca teknik değil aynı zamanda güçlü bir anlatım diliyle desteklenir.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact">
+          <div class="container contact-grid">
+            <div class="card contact-box reveal">
+              <div class="qr-layout">
+                <img src="8cfdebc32177663de0ffbdd7001519a4.png" alt="WhatsApp QR kodu">
+                <div>
+                  <h2>İletişim</h2>
+
+                  <div class="contact-list">
+                    <a class="contact-line" href="https://wa.me/message/XH7GNOU65MQMN1" target="_blank" rel="noopener noreferrer">
+                      <span>Telefon / WhatsApp</span>
+                      <strong>0 539 553 81 83</strong>
+                    </a>
+
+                    <a class="contact-line" href="mailto:vesperastatistical@gmail.com">
+                      <span>E-posta</span>
+                      <strong>vesperastatistical@gmail.com</strong>
+                    </a>
+                  </div>
+
+                  <div class="contact-actions">
+                    <a href="https://wa.me/message/XH7GNOU65MQMN1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">WhatsApp ile Ulaş</a>
+                    <a href="mailto:vesperastatistical@gmail.com" class="btn btn-secondary">Mail Gönder</a>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="services">
-      <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <h2>Hizmetler</h2>
-            <p>Tez, makale ve profesyonel projeler için veri odaklı analiz ve raporlama desteği.</p>
-          </div>
-        </div>
+            <div class="card contact-box reveal">
+              <h2>Veri analizi, ekonometrik modelleme ve akademik danışmanlık</h2>
+              <p>
+                Veri analizi, ekonometrik modelleme ve akademik danışmanlık süreçlerine yönelik teknik destek;
+                R, SPSS ve benzeri platformlarda ham verilerin temizlenmesi, ön işlenmesi, analize hazırlanması
+                ve istatistiksel ile ekonometrik uygulamaların yürütülmesini kapsamaktadır.
+              </p>
+              <p>
+                Tez ve makale çalışmalarında metodoloji kurgusu, bulguların bilimsel raporlanması ve yazım
+                standartlarına uyum çerçevesinde destek sunulmaktadır. Etik ve bilimsel titizlik, güvenilirlik
+                ve yöntemsel tutarlılık temel ilkelerdir.
+              </p>
 
-        <div class="services">
-          <article class="card service reveal">
-            <img src="9020a5f12a637bc28ca8d3c8224e7530.png" alt="Tez ve araştırma desteği görseli">
-            <div class="service-body">
-              <h3>Tez ve araştırma desteği</h3>
-              <p>Araştırma planı, veri değerlendirmesi, bulgu yazımı ve sonuçların akademik çerçevede düzenlenmesine destek sunulur.</p>
-            </div>
-          </article>
-
-          <article class="card service reveal">
-            <img src="ae71a4d33a15ae54d7d08854d6a4266a.png" alt="İstatistiksel analiz ve raporlama görseli">
-            <div class="service-body">
-              <h3>İstatistiksel analiz ve raporlama</h3>
-              <p>Veri setlerinin analiz edilmesi, uygun yöntemlerin seçilmesi ve sonuçların grafiklerle profesyonel rapora dönüştürülmesi hedeflenir.</p>
-            </div>
-          </article>
-
-          <article class="card service reveal">
-            <img src="e0a7a6cc4b889aecbe68938dbbdcf8c3.png" alt="Veri inceleme ve yorumlama görseli">
-            <div class="service-body">
-              <h3>Veri inceleme ve yorumlama</h3>
-              <p>Tablo, çıktı ve istatistiksel bulgular sadeleştirilerek karar alma veya akademik kullanım için daha anlaşılır hale getirilir.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="about-work">
-      <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <h2>Ne yapıyoruz?</h2>
-            <p>Akademik ve profesyonel veri süreçlerini teknik doğrulukla yapılandırıyoruz.</p>
-          </div>
-        </div>
-
-        <div class="work-grid">
-          <article class="work-item reveal">
-            <div class="work-body">
-              <h3>İstatistiksel analiz</h3>
-              <p>Veri setlerinin düzenlenmesi, uygun yöntem seçimi, modelleme ve sonuçların teknik doğrulukla değerlendirilmesi.</p>
-            </div>
-          </article>
-
-          <article class="work-item reveal">
-            <div class="work-body">
-              <h3>Akademik araştırma desteği</h3>
-              <p>Tez, makale ve araştırma projelerinde veri analizi, yöntemsel yapı ve bulguların sunuma hazırlanması.</p>
-            </div>
-          </article>
-
-          <article class="work-item reveal">
-            <div class="work-body">
-              <h3>Raporlama ve görselleştirme</h3>
-              <p>Tablo, grafik ve çıktıları sade, anlaşılır ve profesyonel bir sunum yapısına dönüştürme.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="showcase">
-      <div class="container split">
-        <div class="card image-card reveal">
-          <img src="eb228cdea44db38977661427d3a1d419.png" alt="Vespera Statistical tanıtım görseli">
-        </div>
-
-        <div class="card content-card reveal">
-          <h2>Bilimsel titizlik, profesyonel sunum</h2>
-          <p>
-            Vespera Statistical; veri analizi, akademik çalışma desteği ve istatistiksel raporlama süreçlerini daha düzenli,
-            daha anlaşılır ve daha güçlü hale getirmeyi amaçlayan bir hizmet yapısı sunar.
-          </p>
-          <ul class="list">
-            <li>Akademik ve profesyonel projelerde sistematik analiz desteği sunulur.</li>
-            <li>İstatistiksel çıktılar sade, güven veren ve sunulabilir bir yapıya dönüştürülür.</li>
-            <li>Veri odaklı çalışmalar, yalnızca teknik değil aynı zamanda güçlü bir anlatım diliyle desteklenir.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container contact-grid">
-        <div class="card contact-box reveal">
-          <div class="qr-layout">
-            <img src="8cfdebc32177663de0ffbdd7001519a4.png" alt="WhatsApp QR kodu">
-            <div>
-              <h2>İletişim</h2>
-
-              <div class="contact-list">
-                <a class="contact-line" href="https://wa.me/message/XH7GNOU65MQMN1" target="_blank" rel="noopener noreferrer">
-                  <span>Telefon / WhatsApp</span>
-                  <strong>0 539 553 81 83</strong>
-                </a>
-
-                <a class="contact-line" href="mailto:vesperastatistical@gmail.com">
-                  <span>E-posta</span>
-                  <strong>vesperastatistical@gmail.com</strong>
-                </a>
-              </div>
-
-              <div class="contact-actions">
-                <a href="https://wa.me/message/XH7GNOU65MQMN1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">WhatsApp ile Ulaş</a>
-                <a href="mailto:vesperastatistical@gmail.com" class="btn btn-secondary">Mail Gönder</a>
-              </div>
+              <ul class="list" style="margin-top:18px;">
+                <li>Ham veri temizleme ve analize hazırlık</li>
+                <li>İstatistiksel analiz ve ekonometrik uygulamalar</li>
+                <li>R, SPSS ve benzeri yazılımlarla teknik çalışma desteği</li>
+                <li>Tez ve makale metodolojisi ile bilimsel raporlama desteği</li>
+              </ul>
             </div>
           </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="container footer-inner">
+          <div>© Vespera Statistical</div>
+          <div>Statik tek sayfa • Ölçeklenmiş mobil görünüm • WhatsApp ve e-posta bağlantıları aktif</div>
         </div>
-
-        <div class="card contact-box reveal">
-          <h2>Veri analizi, ekonometrik modelleme ve akademik danışmanlık</h2>
-          <p>
-            Veri analizi, ekonometrik modelleme ve akademik danışmanlık süreçlerine yönelik teknik destek;
-            R, SPSS ve benzeri platformlarda ham verilerin temizlenmesi, ön işlenmesi, analize hazırlanması
-            ve istatistiksel ile ekonometrik uygulamaların yürütülmesini kapsamaktadır.
-          </p>
-          <p>
-            Tez ve makale çalışmalarında metodoloji kurgusu, bulguların bilimsel raporlanması ve yazım
-            standartlarına uyum çerçevesinde destek sunulmaktadır. Etik ve bilimsel titizlik, güvenilirlik
-            ve yöntemsel tutarlılık temel ilkelerdir.
-          </p>
-
-          <ul class="list" style="margin-top:18px;">
-            <li>Ham veri temizleme ve analize hazırlık</li>
-            <li>İstatistiksel analiz ve ekonometrik uygulamalar</li>
-            <li>R, SPSS ve benzeri yazılımlarla teknik çalışma desteği</li>
-            <li>Tez ve makale metodolojisi ile bilimsel raporlama desteği</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <div>© Vespera Statistical</div>
-      <div>Statik tek sayfa • Mobil uyumlu yapı • WhatsApp ve e-posta bağlantıları aktif</div>
+      </footer>
     </div>
-  </footer>
+  </div>
 
   <script>
+    function applySiteScale() {
+      const scaleWrap = document.getElementById('siteScale');
+      const frame = document.getElementById('siteFrame');
+      const designWidth = 1220;
+      const viewportWidth = window.innerWidth;
+      const scale = Math.min(1, viewportWidth / designWidth);
+
+      frame.style.transform = `scale(${scale})`;
+      scaleWrap.style.height = `${frame.scrollHeight * scale}px`;
+    }
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -853,6 +761,10 @@
     }, { threshold: 0.14 });
 
     document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+    window.addEventListener('load', applySiteScale);
+    window.addEventListener('resize', applySiteScale);
+    window.addEventListener('orientationchange', applySiteScale);
   </script>
 </body>
 </html>
